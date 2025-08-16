@@ -1,0 +1,31 @@
+import { LoginForm } from "@/components/login-form"
+import { Share2 } from "lucide-react"
+import Link from "next/link"
+
+export default function LoginPage() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-card to-background p-4">
+      <div className="w-full max-w-md">
+        <div className="text-center mb-8">
+          <Link href="/" className="inline-flex items-center space-x-2 mb-6">
+            <Share2 className="h-8 w-8 text-primary" />
+            <span className="text-2xl font-serif font-bold text-foreground">NeighborHub</span>
+          </Link>
+          <h1 className="text-3xl font-serif font-bold text-foreground mb-2">Welcome back</h1>
+          <p className="text-muted-foreground">Sign in to your account to continue sharing</p>
+        </div>
+
+        <LoginForm />
+
+        <div className="text-center mt-6">
+          <p className="text-muted-foreground">
+            Don't have an account?{" "}
+            <Link href="/auth/register" className="text-primary hover:underline font-medium">
+              Join your community
+            </Link>
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
