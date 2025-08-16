@@ -1,0 +1,7 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+cmd = "go run ./cmd/server/main.go"
+include_ext = ["go"]
+exclude_dir = ["tmp"]
